@@ -24,7 +24,7 @@
 
         <aura:set attribute="title">
             <lightning:icon iconName="utility:automate" size="small" />
-            {! v.bikeFields.Name } Gear Ratios
+            &nbsp;{! v.bikeFields.Name } Gear Ratios
         </aura:set>
 
         <aura:set attribute="footer">
