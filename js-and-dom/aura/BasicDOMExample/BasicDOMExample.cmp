@@ -1,0 +1,15 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+
+    <aura:attribute name="text" type="String"/>
+
+    <lightning:card title="Basic DOM Example" iconName="utility:hierarchy">
+        <div class="slds-card__body slds-card__body-inner">
+            <p>
+                <lightning:formattedText value="{!v.text}"/>
+            </p>
+            <p class="slds-p-horizontal-small">
+                <lightning:input label="Input Text" aura:id="inputText" type="text" value="{!v.text}"/>
+            </p>
+        </div>
+    </lightning:card>
+</aura:component>	

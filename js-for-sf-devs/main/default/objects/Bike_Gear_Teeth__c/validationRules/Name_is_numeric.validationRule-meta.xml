@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Name_is_numeric</fullName>
+    <active>true</active>
+    <description>Ensure name field is a numeric value.</description>
+    <errorConditionFormula>NOT(ISNUMBER(Name))</errorConditionFormula>
+    <errorDisplayField>Bike_Gear__c</errorDisplayField>
+    <errorMessage>Tooth Count must be numeric.</errorMessage>
+</ValidationRule>

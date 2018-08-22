@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tooth_Count_is_Positive</fullName>
+    <active>true</active>
+    <description>no negative numbers allowed in tooth count</description>
+    <errorConditionFormula>VALUE(Name) &lt; 1</errorConditionFormula>
+    <errorDisplayField>Bike_Gear__c</errorDisplayField>
+    <errorMessage>Tooth count must be a number value greater than 0</errorMessage>
+</ValidationRule>

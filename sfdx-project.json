@@ -1,0 +1,34 @@
+{
+    "packageDirectories": [
+        {
+            "path": "js-for-sf-devs",
+            "default": true,
+            "package": "js-for-sf-devs-core",
+            "versionName": "ver 0.1",
+            "versionNumber": "0.1.0.NEXT"
+        },
+        {
+            "path": "js-and-dom",
+            "package": "js-and-dom",
+            "versionName": "ver 0.1",
+            "versionNumber": "0.1.0.NEXT",
+            "default": false
+        },
+        {
+            "path": "events-and-functions",
+            "package": "events-and-functions",
+            "versionName": "ver 0.1",
+            "versionNumber": "0.1.0.NEXT",
+            "default": false
+        }
+    ],
+    "namespace": "",
+    "sfdcLoginUrl": "https://login.salesforce.com",
+    "sourceApiVersion": "43.0",
+    "packageAliases": {
+        "js-and-dom": "0Ho0Y000000blLoSAI",
+        "js-for-sf-devs-core": "0Ho0Y000000blLtSAI",
+        "events-and-functions": "0Ho0Y000000blLySAI",
+        "events-and-functions@0.1.0-1": "04t0Y000001pFQqQAM"
+    }
+}

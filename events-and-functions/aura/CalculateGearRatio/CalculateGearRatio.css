@@ -1,0 +1,10 @@
+.THIS {
+    min-width:430px;
+    max-width:620px;
+}
+.THIS .large-text {
+    font-size: 3em
+}
+.THIS .body-content {
+    padding: .75rem 1rem 0;
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Min_Gearing__c</fullName>
+    <externalId>false</externalId>
+    <label>Min Gearing</label>
+    <summarizedField>Bike_Gear_Teeth__c.Number_of_Teeth__c</summarizedField>
+    <summaryForeignKey>Bike_Gear_Teeth__c.Bike_Gear__c</summaryForeignKey>
+    <summaryOperation>min</summaryOperation>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

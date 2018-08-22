@@ -1,0 +1,9 @@
+<aura:component>
+
+    <c:TestSingletonHelper/>
+    <c:TestSingletonHelper/>
+    <c:TestSingletonHelper/>
+    <c:TestSingletonHelper/>
+    <c:TestSingletonHelper/>
+
+</aura:component>	

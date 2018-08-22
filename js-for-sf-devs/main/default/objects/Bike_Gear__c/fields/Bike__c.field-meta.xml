@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bike__c</fullName>
+    <externalId>false</externalId>
+    <label>Bike</label>
+    <referenceTo>Bike__c</referenceTo>
+    <relationshipLabel>Bike Gears</relationshipLabel>
+    <relationshipName>Bike_Gears</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>true</writeRequiresMasterRead>
+</CustomField>

@@ -1,0 +1,63 @@
+<aura:component controller="BikeLightningService" implements="flexipage:availableForRecordHome, force:hasRecordId">
+    <!--
+        attributes: 
+        front gears Array
+        rear gears Array
+        front gear
+        rear gear
+
+        input front gears
+        input rear gears
+
+        button: handleCalculateGearRatio
+    -->
+    <aura:attribute name="recordId" type="String"/>
+    <aura:attribute name="bike" type="Object"/>
+    <aura:attribute name="bikeFields" type="Object"/>
+    <aura:attribute name="currentFrontGear" type="Integer" default="0"/>
+    <aura:attribute name="currentRearGear" type="Integer" default="0"/>
+    <aura:attribute name="frontGears" type="Object[]"/>
+    <aura:attribute name="rearGears" type="Object[]"/>
+    <aura:attribute name="gearRatio" type="Decimal" default="0.0"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.handleInit}"/>
+
+    <force:recordData aura:id="bikeRecord"
+        recordId="{!v.recordId}"
+        targetRecord="{!v.bike}"
+        targetFields="{!v.bikeFields}"
+        layoutType="FULL"
+        mode="VIEW"
+        fields="Name,Id"
+    />
+
+    <lightning:card>
+
+        <aura:set attribute="title">
+            <lightning:icon iconName="utility:automate" size="small" />
+            {! v.bikeFields.Name } Gear Ratios
+        </aura:set>
+
+        <aura:set attribute="footer">
+            <!-- controls to change the gears go here -->
+            <lightning:select aura:id="selectFront" name="frontGear" label="Front" onchange="{!c.handleSelectChange}" value="{!v.currentFrontGear}">
+                <aura:iteration items="{!v.frontGears}" var="item">
+                    <option value="{!item.index}">{!item.value}</option>
+                </aura:iteration>
+            </lightning:select>
+            <lightning:select aura:id="selectRear" name="rearGear" label="Rear" onchange="{!c.handleSelectChange}" value="{!v.currentRearGear}">
+                <aura:iteration items="{!v.rearGears}" var="item">
+                    <option value="{!item.index}">{!item.value}</option>
+                </aura:iteration>
+            </lightning:select>
+    
+        </aura:set>
+
+        <div class="body-content">
+            <lightning:formattedNumber value="{!v.gearRatio}" style="decimal" class="large-text" minimumFractionDigits="1" minimumIntegerDigits="1" />
+        </div>
+    </lightning:card>
+
+
+
+</aura:component>
