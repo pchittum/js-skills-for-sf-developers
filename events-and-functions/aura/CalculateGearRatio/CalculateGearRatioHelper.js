@@ -1,11 +1,6 @@
 ({
     getGears : function(recordId, component) {
 
-        // fetch gear values
-        // fetch currenct gear number values
-
-        // set gear ratio
-
         const action = component.get("c.retrieveBikeGears");
 
         action.setParam('bikeId', recordId);
@@ -38,9 +33,6 @@
                 component.set("v.frontGears", frontList);
                 component.set("v.rearGears", rearList);
 
-                console.log(component.get("v.frontGears"));
-                console.log(component.get("v.rearGears"));
-
                 this.setGearRatio(component);
             }
 
@@ -50,19 +42,12 @@
     }, 
     setGearRatio : function(component){
 
-        console.log('got to setGearRatio');
-
         const selectedFront = component.get("v.currentFrontGear"),
               selectedRear = component.get("v.currentRearGear"),
               frontGears = component.get("v.frontGears"),
               rearGears = component.get("v.rearGears");
 
-        console.log(frontGears[selectedFront].Number_of_Teeth__c);
-        console.log(rearGears[selectedRear].Number_of_Teeth__c);
-
         const ratio = frontGears[selectedFront].value / rearGears[selectedRear].value;
-
-        console.log(ratio);
 
         component.set("v.gearRatio", ratio);
     }

@@ -1,16 +1,5 @@
 <aura:component controller="BikeLightningService" implements="flexipage:availableForRecordHome, force:hasRecordId">
-    <!--
-        attributes: 
-        front gears Array
-        rear gears Array
-        front gear
-        rear gear
 
-        input front gears
-        input rear gears
-
-        button: handleCalculateGearRatio
-    -->
     <aura:attribute name="recordId" type="String"/>
     <aura:attribute name="bike" type="Object"/>
     <aura:attribute name="bikeFields" type="Object"/>
