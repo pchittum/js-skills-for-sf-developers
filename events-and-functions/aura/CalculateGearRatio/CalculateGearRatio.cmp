@@ -11,6 +11,8 @@
 
     <aura:handler name="init" value="{!this}" action="{!c.handleInit}"/>
 
+    <aura:method name="reload" action="{!c.handleInit}" access="public" description="Allow explicit reload from other components"/>
+
     <force:recordData aura:id="bikeRecord"
         recordId="{!v.recordId}"
         targetRecord="{!v.bike}"
