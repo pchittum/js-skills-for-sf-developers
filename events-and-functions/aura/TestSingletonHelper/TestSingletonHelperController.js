@@ -21,7 +21,7 @@
             console.log("Initialized compProperty value in " + id + " to 1");
         } else {
             component.compProperty += 1; 
-            console.log("Incremented compProperty value in " + id + " to " + helper.helperProperty);
+            console.log("Incremented compProperty value in " + id + " to " + component.compProperty);
         }
         
         //Helper object: either init or increment
